@@ -81,7 +81,7 @@
 	  var details = [
 	    { name: 'SoundNote', img: 'img/projects/SoundNoteCover.png', data: 'Ear training website'  , type: ['web'],language:['javascript'], link:"soundNote.html"},
 	    { name: 'MotionTrackingDodgeBall', img: 'img/projects/MotionTrackingDodgeBallCover.png', data: 'Implement Kinect-like sensor using Altera DE2 board' , type:['hardware'],language:['verilog'], link:"motionTrackingDodgeBall.html" },
-	    { name: 'DowelSortingRobot', img: 'img/projects/DowelSortingRobotCover.png', data: 'Robot that sorts dowels' , type:['hardware'],language:['assembly'], link:"dowelSortingRobot.html" },
+	    //{ name: 'DowelSortingRobot', img: 'img/projects/DowelSortingRobotCover.png', data: 'Robot that sorts dowels' , type:['hardware'],language:['assembly'], link:"dowelSortingRobot.html" },
 	    { name: 'MusicPlayer', img: 'img/projects/MusicPlayerCover.png', data: 'Digital Signal Processing algorithms on Altera DE2 board' , type:['hardware'],language:['assembly'], link:"musicPlayer.html" },
 	    { name: 'RubeGoldbergToyBox', img: 'img/projects/RubeGoldbergToyBoxCover.png', data: 'Playful Machine to close a toy-box' , type:['hardware'],language:[''], link:"rubeGoldbergToyBox.html" },
 		{ name: 'BalancingRobot', img: 'img/projects/BalancingRobotCover.png', data:'A robot that balances itself' , type:['hardware'],language:['assembly'], link:"balancingRobot.html" },
