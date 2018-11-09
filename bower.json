@@ -1,0 +1,25 @@
+{
+  "name": "public",
+  "version": "0.0.0",
+  "authors": [
+    "Soon Chee Loong <scheeloong@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "www.sooncheeloong.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "bootstrap": "~3.3.5",
+    "angular": "~1.4.4",
+    "angular-ui-router": "~0.2.15",
+    "angular-bootstrap": "~0.13.3",
+    "fontawesome": "~4.4.0",
+    "font-mfizz": "~2.0.1"
+  }
+}

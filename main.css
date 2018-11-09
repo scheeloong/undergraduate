@@ -1,0 +1,845 @@
+body {
+    width: 100%;
+    font-family: 'Raleway', calibri;
+    overflow-x:hidden;
+    margin: 0;
+    height:cover;
+    /* background is blue in color, note: Menu is white, so background cannot be white */
+    background-color: #b0c4de;
+    
+}
+
+/* Only apply this when the media is a specific type
+ * Refer to: 
+ * https://css-tricks.com/snippets/css/media-queries-for-standard-devices/
+ * NOTE: Need !important in the device so does not get overwritten below for desktop
+ * */ 
+@media only screen and (min-width : 320px) and (max-width : 768px) {
+	.smallOnly {
+		visibility:visible!important;
+		display:inline!important;
+
+	}
+	
+	  #data img {
+	    float: none !important;
+	  }
+	  h1{
+	      font-size: 4em!important;
+	  }
+	  #imageData {
+	    display: none!important;
+	  }
+	  #topper {
+	    height: inherit;
+       	  }
+	  #menu{
+	    margin-top: -210px!important;
+	    height:0px!important;
+	  }
+	  .block {
+	    display: block!important;
+	    width: 100%!important;
+	    margin-top: 50px!important;
+	  }
+	  /* This is to bring out the transparent black background using top*/
+	  #menu.state{
+	    height: 195px!important;
+	    top: 200px!important;
+	  }
+	  #menu ul li{
+	    display:block!important;
+	     margin: 5px 5%!important;
+	  }
+	  #menu ul{
+	    margin-right:60px;
+	  }
+	  #menu a {
+	    text-decoration: none;
+	  }
+	  #links{
+	    font-size: 2.5em!important;
+	  }
+	  #bio{
+	    letter-spacing: normal!important;
+	  }
+
+	/*  Mobile Footer for contact info links */
+	footer {
+	    bottom: 0!important;
+	    width: 100%!important;
+	}
+
+	/* Hide the label for the footer in mobile designs */
+	.label {
+		display: none
+	}
+	.video {
+	  position: relative!important;
+	  width: 100%!important;
+	  height: 60%!important;
+	  padding-bottom: 0%!important;
+	}
+	.hideIfMobile {
+		display: none!important;
+	}
+
+	/* Mobile Achievements Carousel */
+	.carousel {
+	    height: 500px;
+	    margin-bottom: 40px;
+	}
+
+	.carousel .item {
+	    height: 500px;
+	}
+
+	.carousel .item img {
+	    width: 100%;
+	    height:100%;
+	}
+
+	.carousel-caption {
+	    z-index: 10;
+	}
+
+	.carousel-caption h {
+	    font-size: 17px!important;
+	    color: #FFF!important;
+	    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black!important;
+	}
+	.carousel-caption p {
+	    margin-bottom: 15px!important;
+	    font-size: 15px!important;
+	    line-height: 1.5!important;
+	    color: #000!important;
+	    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white!important;
+	}
+
+
+}
+
+.video {
+  position: relative;
+  width:70%;
+  height:30%;
+  padding-bottom: 0%;
+}
+.smallOnly {
+	visibility: none;
+	display: none;
+}
+/* Menu CSS
+ * Basically, it starts off by being out of the screen by 110px, then after clicking it adds the css rule to bring it down by 110px  */
+
+#menu{
+    width:100%;
+    text-align:center;
+    margin-top:-110px;
+    top:0;
+    z-index: 1000;
+    position:fixed;
+    webkit-transition: all .4s ease-in 0s;
+    -moz-transition: all .4s ease-in 0s;
+    -ms-transition: all .4s ease-in 0s;
+    -o-transition: all .4s ease-in 0s;
+    transition: all .4s ease-in 0s;
+}
+
+#menu.state{
+    height: 75px;
+    top: 110px;
+    width:100%;
+    background-color:rgba(0, 0, 0, 0.7);
+}
+
+#menu ul{
+    list-style:none;
+}
+
+#menu ul li{
+    display:inline-block;
+    padding: 10px 20px;
+     margin: 15px 5%;
+    font-size: large; 
+    color:#fff;
+    border-radius: 20px;
+    -moz-border-radius:20px;
+    -webkit-border-radius: 20px;
+}
+#menu ul li:hover {
+    background-color:rgba(0, 0, 0, 0.9);
+    cursor:pointer;
+}
+#menu #close {
+    color:#fff;
+    font-size: 30px;
+    margin: 15px 18px;
+    padding: 7px 9px;
+    float:right;
+    background-color:rgba(0, 0, 0, 0.9);
+    border-radius: 10px;
+    -moz-border-radius:10px;
+    -webkit-border-radius: 10px;
+}
+
+
+/* Footer for contact info links */
+footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Achievements Carousel */
+.carousel {
+    height: 300px;
+    /* Small separator between carousel and anything below it */
+    margin-bottom: 10px;
+}
+
+.carousel .item {
+    height: 300px;
+}
+
+.carousel .item img {
+    width: 100%;
+    height:100%;
+}
+
+.carousel-caption {
+    z-index: 0;
+}
+
+.carousel-caption h {
+    font-size: 30px;
+    color: #FFF;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+.carousel-caption p {
+    margin-bottom: 0px;
+    font-size: 25px;
+    line-height: 2.0;
+    color: #000;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+
+#home {
+}
+#project h2 {
+	text-align:center;
+}
+
+footer ul { 
+display: table;
+width: 100%;
+list-style: none;
+} 
+footer ul li{
+    display: table-cell;
+    text-align: center;
+}
+
+/* Tags for Project Buttons */
+tag {
+    display: inline-block;
+    -webkit-border-radius:4px;
+    -moz-border-radius: 4px;
+    -o-border-radius: 4px;
+    padding: 4px 7px 4px 7px;
+    margin: 8px;
+    color: #fff;
+    width: auto;
+    background-color: #333;
+    border: 1px dashed #000;
+}
+
+tag:hover {
+  font-weight: bold;
+  border: 1px solid #000;
+}
+intag {
+    display: inline-block;
+    -webkit-border-radius:4px;
+    -moz-border-radius: 4px;
+    -o-border-radius: 4px;
+    padding: 4px 7px 4px 7px;
+    margin: 8px;
+    color: #FFF;
+    width: auto;
+    background-color: #00808080;
+    font-size:small;
+}
+intag:hover {
+  font-weight: bold;
+  border: 1px solid #000;
+}
+
+#pjmain tag{
+    /* Make the cursor turn into a pointer when hovered overed the different projects */
+    cursor:pointer;
+}
+#pjmain intag{
+    /* Make the cursor turn into a pointer when hovered overed the different projects */
+    cursor:pointer;
+}
+
+/* Set different color for each button to click on */
+tag[data-filter = "mobile"] {
+    background-color: #E67E22;
+}
+
+tag[data-filter = "web"] {
+    background-color: #C0392B;
+}
+
+tag[data-filter = "hardware"] {
+    background-color: #3498DB;
+}
+
+tag[data-filter = "desktop"] {
+    background-color: #34495E;
+}
+
+intag[data-filter = "cplusplus"] {
+    background-color: #00808080;
+}
+
+tag[data-filter = "fp"] {
+    background-color: #DF0101;
+}
+
+tag[data-filter = "paper"] {
+    background-color: #27AE60;
+}
+#topper {
+    height: inherit;
+    padding-top:1%;
+}
+
+#header{
+    font-size: 2em;
+    margin: 0px 20px 20px 20px;
+}
+
+#header #menuopen{
+    float:right;
+    text-decoration: none;
+    font-size:12px;
+    margin: 0 12px;
+}
+.fa-th-large{
+  font: normal normal normal 32px/1 FontAwesome!important;
+}
+#header a{
+    color: #fff;
+}
+
+#data img{
+    display:inline-block;
+    width: 200px;
+    float:right;
+    border-radius:50%;
+    margin:2% 2% 0 2%;
+    vertical-align:bottom;
+}
+#links {
+  text-align: center!important;
+  width: 100%;
+}
+#data {
+  margin-left: 20px;
+}
+h1 {
+    color: #fff;
+    padding-top:0.2em;
+    font-size: 4em;
+    display:inline-block;
+    opacity: 1;
+    font-weight: lighter!important;
+    -webkit-margin-after: 0em;
+    text-align:left;
+    font-family: 'Raleway', calibri;
+    margin-top:0;
+    letter-spacing: 7px;
+}
+
+#data h1{
+    font-size:7em;
+}
+
+h2 {
+    color: #fff;
+    font-size: 2em;
+    opacity: 0.75;
+    text-align:left;
+    font-family: 'Raleway', calibri;
+    letter-spacing: 3px;
+}
+
+#links {
+    text-align:center;
+    background-color:rgba(255, 0, 0, 0.5);
+    font-size: 3em;
+}
+
+#links a{
+    color: #fff;
+    margin: 20px;
+    padding:0;
+
+}
+
+[type="git"]:hover{
+    color: #000;
+    cursor:pointer;
+}
+
+[type="fb"]:hover{
+    color: #3B5999;
+    cursor:pointer;
+}
+
+[type="twit"]:hover{
+    color: #55ACEE;
+    cursor:pointer;
+}
+
+[type="linkedin"]:hover{
+    color: #4875B4;
+    cursor:pointer;
+}
+
+#links a:hover i{
+    vertical-align:bottom;
+}
+
+#bio{
+    padding: 0.35% 8.5%;
+    text-align:justify;
+    letter-spacing: 1px;
+    line-height:2.5em;
+    background-color:rgba(0, 100, 245, 0.2);
+    height: 100%;
+}
+
+#below{
+    text-align:center;
+    margin-top: 2%;
+}
+
+#below h2,
+#bio h2{
+     color: #000;
+     text-align: center;
+}
+
+#below i{
+    font-size: 5em;
+    color: #FFFF00;
+
+}
+#bio p a{
+    color:#fff;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+#bottom {
+  color: #fff;
+  text-align: center;
+  font-weight: bold;
+}
+
+.fa-heart{
+  color: #C0392B;
+  font-size: 30px;
+}
+
+/******************************
+Projects
+******************************/
+
+#prjectpage{
+}
+
+#prjectpage #topper {
+  background: none;
+}
+
+#projectshead h1,
+#workhead h1,
+#abouthead h1{
+  width: 100%;
+  text-align:center;
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0.5em;
+  padding-top: 0.2em;
+}
+
+#pjmain{
+  width: 100%;
+  text-align:center;
+}
+
+#projects{
+  margin: 3% 5%;
+}
+
+#centreThis {
+  width: 100%;
+  text-align:center;
+}
+.block {
+  display: inline-block;
+  vertical-align: top;
+}
+.block img {
+	max-height = 100px;
+}
+
+/* Give false negative then push it positive so that menu doesn't headbutt the word to the top of the page as described 
+ * https://css-tricks.com/hash-tag-links-padding/ 
+ * 
+ */
+
+#project { 
+  margin-top: -285px; 
+  height: 285px; 
+  visibility: hidden;
+}
+
+#home { 
+  margin-top: -285px; 
+  height: 285px; 
+  visibility: hidden;
+}
+/*
+* Work Grid - to handle words covering project pictures when hovered
+*/
+
+#work-grid > .row {
+	margin: 30px 0;
+}
+
+.work-piece {
+	position: relative;
+	color: white;
+	overflow: hidden;
+}
+
+.work-piece > .work-hover {
+	background-color: rgba(27,64,85,0.8);
+	top: 100%;
+	opacity: 0;
+	-webkit-transition: top 0.5s ease, opacity 0.8s linear;
+	-moz-transition: top 0.5s ease, opacity 0.8s linear;
+	-o-transition: top 0.5s ease, opacity 0.8s linear;
+	transition: top 0.5s ease, opacity 0.8s linear;
+	position: absolute;
+	height: 200px;
+	width: 95%;
+	display: table;
+	/*padding: 30px;*/
+}
+
+.work-piece:hover .work-hover {
+	top: 0%;
+	opacity: 1;
+	width: 95%;
+	height: 200px;
+	background-color: rgba(27,64,85,0.8);
+}
+
+.work-piece > img {
+	border: 0px solid #eee;
+	width: 95%;
+	height: 200px;
+}
+
+.work-piece .large-text {
+	margin: 0 0 0 0;
+	vertical-align: 5px;
+	height: 200px;
+}
+
+.work-overlay {
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
+	height: 200px;
+	cursor:pointer;
+}
+.caption {
+	margin: 10px 0 20px 0;
+}
+
+.caption a {
+	text-decoration: underline;
+}
+
+.caption a:hover {
+	opacity: 0.8;
+}
+
+@media (min-width: 1200px) and (max-width: 1599px) {
+    .hidden-lg {
+        display: none !important;
+    }
+}
+
+
+.visible-xl-block,
+.visible-xl-inline,
+.visible-xl-inline-block,
+.visible-xl{
+    display: none !important;
+}
+
+
+
+@media (min-width: 1600px) {
+    .container {
+        width: 1570px;
+    }
+
+    .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12 {
+        float: left;
+    }
+
+    .col-xl-12 {
+        width: 100%;
+    }
+
+    .col-xl-11 {
+        width: 91.66666667%;
+    }
+
+    .col-xl-10 {
+        width: 83.33333333%;
+    }
+
+    .col-xl-9 {
+        width: 75%;
+    }
+
+    .col-xl-8 {
+        width: 66.66666667%;
+    }
+
+    .col-xl-7 {
+        width: 58.33333333%;
+    }
+
+    .col-xl-6 {
+        width: 50%;
+    }
+
+    .col-xl-5 {
+        width: 41.66666667%;
+    }
+
+    .col-xl-4 {
+        width: 33.33333333%;
+    }
+
+    .col-xl-3 {
+        width: 25%;
+    }
+
+    .col-xl-2 {
+        width: 16.66666667%;
+    }
+
+    .col-xl-1 {
+        width: 8.33333333%;
+    }
+
+    .col-xl-pull-12 {
+        right: 100%;
+    }
+
+    .col-xl-pull-11 {
+        right: 91.66666667%;
+    }
+
+    .col-xl-pull-10 {
+        right: 83.33333333%;
+    }
+
+    .col-xl-pull-9 {
+        right: 75%;
+    }
+
+    .col-xl-pull-8 {
+        right: 66.66666667%;
+    }
+
+    .col-xl-pull-7 {
+        right: 58.33333333%;
+    }
+
+    .col-xl-pull-6 {
+        right: 50%;
+    }
+
+    .col-xl-pull-5 {
+        right: 41.66666667%;
+    }
+
+    .col-xl-pull-4 {
+        right: 33.33333333%;
+    }
+
+    .col-xl-pull-3 {
+        right: 25%;
+    }
+
+    .col-xl-pull-2 {
+        right: 16.66666667%;
+    }
+
+    .col-xl-pull-1 {
+        right: 8.33333333%;
+    }
+
+    .col-xl-pull-0 {
+        right: auto;
+    }
+
+    .col-xl-push-12 {
+        left: 100%;
+    }
+
+    .col-xl-push-11 {
+        left: 91.66666667%;
+    }
+
+    .col-xl-push-10 {
+        left: 83.33333333%;
+    }
+
+    .col-xl-push-9 {
+        left: 75%;
+    }
+
+    .col-xl-push-8 {
+        left: 66.66666667%;
+    }
+
+    .col-xl-push-7 {
+        left: 58.33333333%;
+    }
+
+    .col-xl-push-6 {
+        left: 50%;
+    }
+
+    .col-xl-push-5 {
+        left: 41.66666667%;
+    }
+
+    .col-xl-push-4 {
+        left: 33.33333333%;
+    }
+
+    .col-xl-push-3 {
+        left: 25%;
+    }
+
+    .col-xl-push-2 {
+        left: 16.66666667%;
+    }
+
+    .col-xl-push-1 {
+        left: 8.33333333%;
+    }
+
+    .col-xl-push-0 {
+        left: auto;
+    }
+
+    .col-xl-offset-12 {
+        margin-left: 100%;
+    }
+
+    .col-xl-offset-11 {
+        margin-left: 91.66666667%;
+    }
+
+    .col-xl-offset-10 {
+        margin-left: 83.33333333%;
+    }
+
+    .col-xl-offset-9 {
+        margin-left: 75%;
+    }
+
+    .col-xl-offset-8 {
+        margin-left: 66.66666667%;
+    }
+
+    .col-xl-offset-7 {
+        margin-left: 58.33333333%;
+    }
+
+    .col-xl-offset-6 {
+        margin-left: 50%;
+    }
+
+    .col-xl-offset-5 {
+        margin-left: 41.66666667%;
+    }
+
+    .col-xl-offset-4 {
+        margin-left: 33.33333333%;
+    }
+
+    .col-xl-offset-3 {
+        margin-left: 25%;
+    }
+
+    .col-xl-offset-2 {
+        margin-left: 16.66666667%;
+    }
+
+    .col-xl-offset-1 {
+        margin-left: 8.33333333%;
+    }
+
+    .col-xl-offset-0 {
+        margin-left: 0;
+    }
+
+    .visible-xl {
+        display: block !important;
+    }
+
+    table.visible-xl {
+        display: table;
+    }
+
+    tr.visible-xl {
+        display: table-row !important;
+    }
+
+    th.visible-xl, td.visible-xl {
+        display: table-cell !important;
+    }
+
+    .visible-xl-block {
+        display: block !important;
+    }
+
+    .visible-xl-inline {
+        display: inline !important;
+    }
+
+    .visible-xl-inline-block {
+        display: inline-block !important;
+    }
+
+    .hidden-xl {
+        display: none !important;
+    }
+}

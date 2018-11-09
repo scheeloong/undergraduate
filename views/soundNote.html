@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en"> <!-- Language is English --> 
+<!-- Note: Style may remain even after commenting out, remove entirely from html--> 
+   <link rel = "stylesheet" type = "text/css" href="software.css" /> <!-- Import styles from different file --> 
+   <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+   <script src="software.js"></script>
+	<body ng-controller="ProjCtrl">
+	<meta name="keywords" content="Soon Chee Loong, University of Toronto, cheeloongsoon@mail.utoronto.ca, Electrical Engineer"/>
+	<meta name="description" content="Soon Chee Loong's Work"/>
+						<div class="buttonWrapper">
+			    <button class="btn btn-danger" type="button" ng-click="close()">Close</button>
+			</div>
+		<!-- Article-->
+		
+		<div id="titleOfSoftware">
+
+		<h2>Sound Note</h2>
+		<h3>Purpose</h3> 
+		<p> 
+		To create a free Ear Training website for music students.  
+		</p> 
+		<h3>Design Challenges</h3>
+			<h4>Password Encryption</h4> 
+			<p>
+				We need to encrypt password. We used the bcrypt library to do so. 
+			</p>
+
+		<h3>Result</h3> 
+		<p>
+		The Ear Training website works perfectly as shown in Video 1. 
+		</p>
+		<video poster="" controls width="720" height="405">  
+		<source src="video/soundNote.mp4" type="video/mp4" />
+		<p>Your browser doesn't support video, please <a href="video/soundNote.mp4">download it</a>.</p>
+		</video>
+		<p> <ins>Video 1: A Demonstration of the Sound Note Ear Training Website.</ins> </p> 
+		
+		<h3>Report</h3>
+		<p>
+		<a class=Report href="https://github.com/scheeloong/Javascript/tree/master/SoundNote"><span>Code</span></a><br><br> 
+		</p>
+
+		<h3>Technologies</h3>
+		<div id="parent">
+			<span id="headerTech"><b>Javascript</b></span>
+			<span id="technology">- Implement Perfect Pitch, Relative Pitch, Chords ear training games</span>
+			</br> </br>
+			<span id="headerTech"><b>Web Audio</b></span>
+			<span id="technology">- Used to output sounds for the various ear training games</span>
+			</br> </br>
+			<span id="headerTech"><b>ExpressJs</b></span>
+			<span id="technology">- To dynamically display pages on the website</span>
+			</br> </br>
+			<span id="headerTech"><b>MongoDb</b></span>
+			<span id="technology">- To store user information such as login, encrypted password, and current scores.</span>
+			</br> </br>
+			<span id="headerTech"><b>HTML + CSS + Twitter Bootstrap</b></span>
+			<span id="technology">- Layout and outlook of the webpages</span>
+		</div>
+			
+		<h3>Task Distribution</h3>
+		
+		<h4>Soon Chee Loong</h4>
+		<p>
+			Implement Perfect Pitch, Relative Pitch, and Chord ear training games using Javascript and Web Audio. 
+		</p> 
+		<h4>Felix</h4>
+		<p>
+			Implement ExpressJs backend with mongoDb database. 
+		</p> 
+		<h4>Fiona</h4>
+		<p>
+			Implement frontend using HTML, CSS, and Twitter Bootstrap. 
+		</p> 
+		<h4>Brandon</h4>
+		<p>
+			Implement the pitch detection game.  
+		</p> 
+		<h3>Acknowledgement</h3>
+		<p>
+		<a class=Report href="http://www.cs.toronto.edu/~mashiyat/"><span>Prof. Mashiyat</span></a> for creating this project. <br> 
+		</p>
+		</div> 
+	</body>
+</html>

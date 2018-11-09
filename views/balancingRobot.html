@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en"> <!-- Language is English --> 
+<!-- Note: Style may remain even after commenting out, remove entirely from html--> 
+   <link rel = "stylesheet" type = "text/css" href="software.css" /> <!-- Import styles from different file --> 
+   <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+   <script src="software.js"></script>
+	<body ng-controller="ProjCtrl">
+	<meta name="keywords" content="Soon Chee Loong, University of Toronto, cheeloongsoon@mail.utoronto.ca, Electrical Engineer"/>
+	<meta name="description" content="Soon Chee Loong's Work"/>
+		<div class="buttonWrapper">
+			    <button class="btn btn-danger" type="button" ng-click="close()">Close</button>
+		</div>
+		<!-- Article-->
+		<div id="motionTrackingDodgeBallNav">
+		<h2>Balancing Robot</h2>
+		<h3>Purpose</h3> 
+		<p> 
+		The purpose of this project is to come up with a robot that can balance itself. 		
+		</p> 
+		<h3>Goal</h3> 
+		<p>
+		Our goal was to learn to implement pulse width modulation in NIOSII Assembly. 
+		</p> 
+		<h3>Design Challenges</h3>
+		<h4>Detecting the object</h4> 
+		<p>
+		</p> 
+		
+		<h3>Result</h3> 
+		<p>
+		The project works as intended. 
+		The final results are shown in <em>Video 1</em>. 	
+		</p>
+
+		<video poster="img/balancingRobot.png" controls width="720" height="405"> <!-- Poster is the picture on screen before clicking play --> 
+		<source src="video/balancingRobot.mp4" type="video/mp4" />
+		<p>Your browser doesn't support video, please <a href="video/balancingRobot.mp4">download it</a>.</p>
+		</video>		
+		<p> <ins>Video 1: A Demonstration of the Balancing Robot.</ins> </p> 
+
+		
+		<h3>Reflection</h3> 
+		<h4>Pair Programming</h4> 
+		<p>
+			TODO 
+		</p>
+		
+		<h3>Report</h3>
+		<p>
+		<a class=Report href="https://github.com/scheeloong/NiosII-Assembly/tree/master/Balancing%20Robot"><span>Code</span></a>  
+		</p>
+		<h3>Task Distribution</h3>
+		<h4>Aditya Shankar</h4> 
+		<p>
+		Implemented Pulse Width Modulation to control amount of voltage sent to wheels. 
+		</p>
+		<h4>Soon Chee Loong</h4>
+		<p>
+		Implement reading sensor values, comparing threshold levels to control wheels.  		
+		</p> 
+		<h3>Acknowledgement</h3>
+		<p>
+		<a class=Report href="http://janders.eecg.toronto.edu/"><span>Prof. Anderson</span></a> for inspiring us in this project.<br> 
+		</p>
+		</div> 
+	</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en"> <!-- Language is English --> 
+<!-- Note: Style may remain even after commenting out, remove entirely from html--> 
+   <link rel = "stylesheet" type = "text/css" href="software.css" /> <!-- Import styles from different file --> 
+   <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+   <script src="software.js"></script>
+	<body ng-controller="ProjCtrl">
+	<meta name="keywords" content="Soon Chee Loong, University of Toronto, cheeloongsoon@mail.utoronto.ca, Electrical Engineer"/>
+	<meta name="description" content="Soon Chee Loong's Work"/>
+		<div class="buttonWrapper">
+			    <button class="btn btn-danger" type="button" ng-click="close()">Close</button>
+		</div>
+		<!-- Article-->
+		<div id="titleOfSoftware">
+		<h2>Painterly Rendering</h2>
+		<h3>Purpose</h3> 
+		<p> 
+		To take an image and process it so that it appears to be painted
+		</p> 
+		<h3>Design Challenges</h3>
+			<h4>Clipping of Paint Stroke</h4> 
+			<p>
+				The Canny Edge Detection algorithm was used to compute the edges to separate
+				regions of the image during painting. It is used to clip any paint stroke 
+				that may cross and edge. 
+			</p>
+			<h4>Orientation Paint Stroke</h4> 
+			<p>
+				The orientation of paint stroke was made to align with the normal to the gradient of image 
+				intensity. 
+			</p>
+			<h4>Make Painting Appear Realistic</h4> 
+			<p>
+				I added random pertubations to both the stroke intensity and stroke orientation 
+				so that it appears to be more realistic as an actual person would not have 
+				perfect strokes and colors on the image. 
+			</p>
+		<h3>Result</h3> 
+		<p>
+		The Painterly Rendering program works perfectly as shown in the Report. 
+		</p>
+		
+		<h3>Report</h3>
+		<p>
+		<a class=Report href="https://github.com/scheeloong/Python2/tree/master/PainterlyRendering"><span>Code</span></a><br><br> 
+		<a class=Report href="./pdf/painterlyRendering.pdf"><span>Report</span></a><br><br> 
+		</p>
+
+		<h3>Technologies</h3>
+		<div id="parent">
+			<span id="headerTech"><b>Python 2.7</b></span>
+			<span id="technology">- Primary Language</span>
+		</div>
+			
+		<h3>Task Distribution</h3>
+		
+		<h4>Soon Chee Loong</h4>
+		<p>
+			A solo project. 
+		</p> 
+
+		<h3>Acknowledgement</h3>
+		<p>
+		<a class=Report href="http://www.cs.toronto.edu/~guerzhoy/"><span>Prof. Michael Guerzhoy</span></a> for creating this project. <br> 
+		</p>
+		</div> 
+	</body>
+</html>

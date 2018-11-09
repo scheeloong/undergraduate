@@ -1,0 +1,267 @@
+<!DOCTYPE html> 
+<html ng-app="myApp">
+<head> 
+<link rel="stylesheet" type="text/css" href="bower_components/fontawesome/css/font-awesome.css">
+<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+<!-- For the programming languages icon --> 
+<link rel="stylesheet" href="bower_components/font-mfizz/css/font-mfizz.css">
+<!-- main.css contains code for top menu --> 
+<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="./main.css">
+<!-- no idea what this does yet--> 
+<script src="respond.js"></script>
+<!-- The favicon image that gets displayed at the top of the browser 
+Generated for all devices using http://realfavicongenerator.net/ --> 
+<link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="img/favicon//apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="img/favicon/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" href="img/favicon/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="img/favicon/android-chrome-192x192.png" sizes="192x192">
+<link rel="icon" type="image/png" href="img/favicon/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="img/favicon/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="img/favicon/manifest.json">
+<meta name="msapplication-TileColor" content="#00aba9">
+<meta name="msapplication-TileImage" content="img/favicon/mstile-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<!-- end of favicon image -->
+
+<!-- no idea what this does yet--> 
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+      <div id="menu">
+      <a href="#" id="close" onclick="$('#menu').removeClass('state')"><i class="fa fa-times"></i></a>
+          <ul>
+              <a href="#home"><li><i class="fa fa-home"></i> Home</li></a>
+              <a href="#project"><li><i class="fa fa-desktop"></i> Projects</li></a>
+              <a href="#career"><li><i class="fa fa-institution"></i> Career</li></a>
+              <a href="#contact"><li><i class="fa fa-phone"></i> Contact</li></a>
+          </ul>
+      </div>
+       <div id="topper">
+          <div id="header">
+		  <!-- <a href="mailto:scheeloong@gmail.com"><i class="fa fa-envelope"></i></a> -->
+		  <p>Software Engineer
+                  <a href="#" onclick="$('#menu').addClass('state')" id="menuopen"><i class="fa fa-th-large"></i><br/>Menu</a>
+		  </p>
+          </div>
+      </div>
+</head>
+
+<body ng-controller="AppCtrl">
+<!-- <p> Hello World {{haha}} </p> -->
+<!-- Achievements Carousel --> 
+<div id="ad-carousel" class="carousel slide" data-ride="carousel">
+    <span id="home"> THIS DOESN'T DO ANYTHING AND IS HIDDEN, USE FOR MENU SCROLLING </span>
+    <ol class="carousel-indicators">
+        <li data-target="#ad-carousel" data-slide-to="1" class="active"></li>
+        <li data-target="#ad-carousel" data-slide-to="2"></li>
+        <li data-target="#ad-carousel" data-slide-to="3"></li>
+		<li data-target="#ad-carousel" data-slide-to="4"></li>
+    </ol>
+    <div class="carousel-inner">
+        <div class="item active">
+            <img src="img/carousel/samsung.jpg" alt="1 slide">
+            <div class="container">
+                <div class="carousel-caption">
+					<a href="pdf/samsungGearVrPrize.pdf">
+                    <h1>SFVR Hack 2015</h1>
+                    <p>First Place, out of 15 Teams</p>
+					</a>
+                </div>
+            </div>
+        </div>
+		
+        <div class="item">
+            <img src="img/carousel/piazza.jpg" alt="2 slide">
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>Piazza Hack 2015</h1>
+                    <p>Second Place, out of 20 Teams</p>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="img/carousel/greylock.jpg" alt="3 slide">
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>Greylock Hack 2015</h1>
+                    <p>Finalist, Top 10 out of 45 Teams</p>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="img/carousel/salesforce.png" alt="4 slide">
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>Salesforce</h1>
+					<h1>Hack 2016</h1>
+                    <p>First Place, out of 20 Teams</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a class="left carousel-control" href="#ad-carousel" data-slide="prev"><span
+            class="glyphicon glyphicon-chevron-left"></span></a>
+    <a class="right carousel-control" href="#ad-carousel" data-slide="next"><span
+            class="glyphicon glyphicon-chevron-right"></span></a>
+</div>
+<!-- <hr class="feature-divider"> -->
+		<div class="centreThis">
+					<figure id="centreThis">
+						<img width="150" height="150" src="img/profile.jpg" alt="Picture of My Face"> <!-- alt provides alternate text if image is not displayed --> 
+						<figcaption id="profile"> <ins>Soon Chee Loong</ins></figcaption>
+					</figure>
+				<!--
+				<p class="aboutMe">
+					I demonstrate my works and projects here. <br> 
+					Also, I provide detailed explanations for each of my works. <br> 
+					If you have questions, feel free to contact me.<br> 
+					If you are interested in collaboration,<br> 
+					I believe my works demonstrate my abilities and team culture.			<br> 		
+				</p>
+				-->
+
+			   <p id="centreThis">
+				 <!-- <pre> Preserves white space and entire formatting as if this was a Word Document </pre> --> 
+			       <span id="project"></span>
+				Programming allows me to extend my creativity beyond boundaries. <br> 
+				In software, simulations are programmed to be ideal; 			 <br> 
+				problems are solved numerically; physics laws can be broken. 	 <br> 
+				Anything is possible in software.								 <br> 
+				I believe, 													     <br> 
+				<em> Software Without Limits</em> 					
+			   </p>
+		   </div> 
+		   <div id="centreThis">
+			   <h2 id="centreThis"> Projects </h2> 
+		           <div id="pjmain">
+				<tag data-filter="reset" ng-click="clicked('')"><i class="fa fa-refresh"></i></tag>
+				<tag ng-show="typefilter=='desktop' || typefilter==''" data-filter="desktop" ng-click="clicked('desktop')">Desktop</tag>
+				<tag ng-show="typefilter=='web' || typefilter==''" data-filter="web" ng-click="clicked('web')">Website</tag>
+				<tag ng-show="typefilter=='mobile' || typefilter==''" data-filter="mobile" ng-click="clicked('mobile')">Mobile</tag>
+				<tag ng-show="typefilter=='hardware' || typefilter==''" data-filter="hardware" ng-click="clicked('hardware')">Hardware</tag>
+				<div ng-show="typefilter!=''"> 
+					<br/>
+					<div ng-show="typefilter=='desktop'">
+						<intag data-filter="cplusplus" ng-click="language('cplusplus')"> <i class="icon-cplusplus" style="color:white"></i></intag>
+						<intag data-filter="python" ng-click="language('python')"> <i class="icon-python" style="color:white"></i></br>python</intag>
+						<intag data-filter="java" ng-click="language('java')"> <i class="icon-java" style="color:white"></i> </br>java</intag>
+						<intag data-filter="bash" ng-click="language('bash')"> <i class="fa fa-terminal" style="color:white"></i></br>bash</intag>
+						<intag data-filter="c" ng-click="language('c')"> <i class="icon-c" style="color:white"></i> </intag>
+					</div>
+					<div ng-show="typefilter=='web'">
+						<intag data-filter="javascript" ng-click="language('javascript')"> <i class="icon-nodejs" style="color:white"></i></br>nodejs</intag>
+						<intag data-filter="django" ng-click="language('django')"> <i class="icon-python" style="color:white"></i></br>django</intag>
+						<intag data-filter="rails" ng-click="language('rails')"> <i class="icon-ruby-on-rails" style="color:white"></i></br>rails</intag>
+					</div>
+					<div ng-show="typefilter=='mobile'">
+						<intag data-filter="android" ng-click="language('android')"> <i class="fa fa-android" style="color:white"></i></br>android</intag>
+						<intag data-filter="ios" ng-click="language('ios')"> <i class="fa fa-apple" style="color:white"></i></br>ios</intag>
+					</div>
+					<div ng-show="typefilter=='hardware'">
+						<intag data-filter="verilog" ng-click="language('verilog')"><i class="fa fa-plane" style="color:white"></i></br>verilog</intag>
+						<intag data-filter="assembly" ng-click="language('assembly')"><i class="fa fa-gear" style="color:white"></i></br>assembly</intag>
+					</div>
+				</div>
+			   </div>
+			<!-- note: Must have this class=container for the col-md-6 to work properly without making links not work -->
+			  <div id="projects" class="container" >
+				  <!-- Note: col-xl-3 is custom coded in main.css and not implemented in bootstrap itself -->
+				  <div class="block col-s-12 col-md-6 col-lg-4 col-xl-3 work-piece" ng-repeat="project in projects | selectedType:typefilter:languagefilter" target="_project" type="{{project.type}}">
+					  <img class="work-thumb" width=100% height=200px ng-src="{{project.img}}"/>
+					  <div class="work-hover">
+						  <div class="work-overlay" ng-click="open('views/'+project.link)" >
+							  <span>{{project.name}}</span>
+							  <p class="caption">{{project.data}}</p>
+							  <button type="button" class="btn btn-default smallOnly" ng-click="open('views'+project.link)">Open</button>
+							  
+						  </div>
+					  </div>
+			          </div>
+			  </div>
+		   </div>
+		   <div id="centreThis" class="container"> 
+		       <span id="career"></span>
+			   <h2 id="centreThis">Career</h2> 
+			<div class="col-md-12">
+				<h3> <a class="Links" href="http://make.skule.ca" title="MAKE"><code></code>Founder, Multidisciplinary Analytical Kinesthetic Education Club</a></h3> 
+			</div>
+			<div class="row">
+				<div class="col-md-12 col-sm-12">
+					   <video poster="img/MAKECover.png" class="video" controls > <!-- Poster is the picture on screen before clicking play --> 
+						<source src="video/MAKE20132014.mp4" type="video/mp4" />
+						<p>Your browser doesn't support video, please <a href="video/MAKE20132014.mp4">download it</a>.</p>
+					</video>
+						<p> <ins>Video 1: Past Events of M.A.K.E</ins> </p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6">
+					<h3> <a class="Links" href="http://tidel.mie.utoronto.ca/" title="TIDEL"><img width=75% height=200px src="img/universityoftoronto.png"> </img></a></h3> 
+				</div>
+				<div class="col-md-6">
+					<h3> <div class="hideIfMobile"></br></br></br></div>Research Student </h3>
+					<p>
+					    <button type="button" class="btn btn-default" ng-click="open('views/spreadConstraint.html')">Paper</button>
+				       </p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6">
+				<h3> <a class="Links" href="https://www.altera.com/" title="ALTERA">
+						<img width=75% height=200px src="img/altera.png"> </img></a></h3> 
+				</div>
+				<div class="col-md-6">
+					<h3> <div class="hideIfMobile"></br></br></br></div>Software Engineering Intern </h3>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6">
+				<h3> <a class="Links" href="https://www.salesforce.com/" title="SALESFORCE">
+						<img width=75% height=200px src="img/salesforce.png"> </img></a></h3> 
+				</div>
+				<div class="col-md-6">
+					<h3> <div class="hideIfMobile"></br></br></br></div>Software Engineering Intern </h3>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6">
+				<h3> <a class="Links" href="https://www.google.com/" title="GOOGLE">
+						<img width=75% height=200px src="img/google.png"> </img></a></h3> 
+				</div>
+				<div class="col-md-6">
+					<h3> <div class="hideIfMobile"></br></br></br></div>Software Engineering Intern </h3>
+				</div>
+			</div>
+		   </div>
+<!-- Note: Don't change the order of include files -->
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+<!-- note: Need Jquery before bootstrap --> 
+<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+<script src="controllers/controller.js"> </script>
+</body>
+
+
+<footer id="contact">
+	<!-- Icons -->
+	<ul class="actions">
+		<li><a href="https://www.github.com/scheeloong" class="fa fa-github fa-2x"><span class="label">Github</span></a></li>
+		<li><a href="http://stackoverflow.com/users/4156169/chee-loong-soon" class="fa fa-stack-overflow fa-2x"><span class="label">StackOverflow</span></a></li>
+		<li><a href="https://www.linkedin.com/pub/chee-loong-soon/46/b91/567" class="fa fa-linkedin fa-2x"><span class="label">LinkedIn</span></a></li>
+		<li><a href="https://twitter.com/scheeloong" class="fa fa-twitter fa-2x"><span class="label">Twitter</span></a></li>
+		<li><a href="http://instagram.com/scheeloong" class="fa fa-instagram fa-2x"><span class="label">Instagram</span></a></li>
+		<li><a href="mailto:scheeloong@gmail.com?Subject=Hey%20from%20scheeloong.in!" class="fa fa-envelope fa-2x"><span class="label">E-mail</span></a></li>
+		<li><a href="/pdf/resumeSoonCheeLoong.pdf" class="fa fa-newspaper-o fa-2x"><span class="label">Resume</span></a></li>
+	<ul>
+</footer>
+</html>
+

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en"> <!-- Language is English --> 
+<!-- Note: Style may remain even after commenting out, remove entirely from html--> 
+   <link rel = "stylesheet" type = "text/css" href="software.css" /> <!-- Import styles from different file --> 
+   <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+   <script src="software.js"></script>
+	<body ng-controller="ProjCtrl">
+	<meta name="keywords" content="Soon Chee Loong, University of Toronto, cheeloongsoon@mail.utoronto.ca, Electrical Engineer"/>
+	<meta name="description" content="Soon Chee Loong's Work"/>
+		<div class="buttonWrapper">
+			    <button class="btn btn-danger" type="button" ng-click="close()">Close</button>
+		</div>
+		<!-- Article-->
+		<div id="titleOfSoftware">
+		<h2>Side Shooter</h2>
+		<h3>Purpose</h3> 
+		<p> 
+		This project is to program a horizontal 2D game. 
+		
+		</p> 
+		<h3>Design Challenges</h3>
+			<h4>Collision Detection</h4> 
+			<p>
+				We used rectangular bounding boxes for all our sprites and implement collision detection 
+				on rectangular bounding boxes. 
+			</p>
+			
+			<h4>Bullet Projectile</h4> 
+			<p>
+				We made the bullet fly a horizontal path using basic physics. 
+			</p>
+			<h4>Generation of Obstacles</h4> 
+			<p>
+				We generated the obstacles at random locations on the other side of the screen. 
+			</p>	
+		<h3>Result</h3> 
+		<p>
+			The sideShooter can be played in 2 modes as shown in Video 1 and Video 2.  
+			In the first mode, both players team up to hit as many obstacles as possible. 
+			In the second mode, both players battle each other and try to destroy each other. 
+		</p>
+		<video poster="" controls width="720" height="405"> <!-- Poster is the picture on screen before clicking play --> 
+		<source src="video/sideShooterA.mp4" type="video/mp4" />
+		<p>Your browser doesn't support video, please <a href="video/sideShooterA.mp4">download it</a>.</p>
+		</video>
+		<p> <ins>Video 1: Side Shooter Mode A</ins> </p> 
+		
+		<video poster="" controls width="720" height="405"> <!-- Poster is the picture on screen before clicking play --> 
+		<source src="video/sideShooterB.mp4" type="video/mp4" />
+		<p>Your browser doesn't support video, please <a href="video/sideShooterB.mp4">download it</a>.</p>
+		</video>
+		<p> <ins>Video 2: Side Shooter Mode B</ins> </p> 
+		
+		<h3>Report</h3>
+		<p>
+		<a class=Report href="https://github.com/scheeloong/Cpp/tree/master/Side%20Shooter"><span>Code</span></a><br><br> 
+		</p>
+
+		<h3>Technologies</h3>
+		<div id="parent">
+			<span id="headerTech"><b>C++</b></span>
+			<span id="technology">- Primary Language</span>
+			<br><br>
+			<span id="headerTech"><b>Allegro 5</b></span>
+			<span id="technology">- Game Library</span>
+		</div>
+			
+		<h3>Task Distribution</h3>
+		
+		<h4>Soon Chee Loong</h4>
+		<p>
+			Implement the classes. 
+			Implement collision detection.
+			Implement controls of game. 
+			Handle data structure to keep track of all objects on the screen. 
+		</p> 
+		<h4>Vivian Liu</h4>
+		<p>
+			Draw the sprites. 
+			Implement bounding boxes. 
+			Implement random generation of obstacles. 
+			Implement the update function to update all objects on the screen at each frame rate. 
+		</p> 
+		</div> 
+	</body>
+</html>

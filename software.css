@@ -1,0 +1,164 @@
+@media only screen and (min-width : 320px) and (max-width : 768px) {
+	.smallOnly {
+		visibility:visible!important;
+		display:inline!important;
+
+	}
+	.video {
+	  position: relative!important;
+	  width: 100%!important;
+	  height: 60%!important;
+	  padding-bottom: 0%!important;
+	}
+	video {
+	  position: relative!important;
+	  width: 100%!important;
+	  height: 60%!important;
+	  padding-bottom: 0%!important;
+	}
+	img {
+	  position: relative!important;
+	  width: 100%!important;
+	  height: 60%!important;
+	  padding-bottom: 0%!important;
+	}
+}
+img {
+  position: relative;
+  width: 80%;
+  height: 30%;`
+  padding-bottom: 0%;
+}
+video {
+  position: relative;
+  width:70%;
+  height:30%;
+  padding-bottom: 0%;
+}
+.video {
+  position: relative;
+  width:70%;
+  height:30%;
+  padding-bottom: 0%;
+}
+.smallOnly {
+	visibility: none;
+	display: none;
+}
+html 
+{
+  height:100%;
+  background-color: rgb(176,196,222);
+  -moz-background-size:cover;
+  background-size:cover;
+}
+a.Report:visited, a.Report:link, a.Report:active, a.Report:hover
+{
+    text-decoration: none;
+	font-family: Rockwell;
+	text-align:center;
+	color:rgb(0,0,255);
+	font-size:medium; 
+	font-weight:bold;
+}
+.buttonWrapper
+{
+	text-align:center; 
+}
+#title 
+{
+	font-color:yellow;
+	color:green;
+}
+button {
+}
+
+li
+{
+    display: inline; /* Make everything horizontal */
+}
+
+
+ul
+{
+    list-style-type: none;
+}
+
+
+h1 
+{
+	color:black;
+	text-align:center;
+}
+h2 
+{
+	color:black;
+	text-align:center;
+}
+h3 
+{
+	font-family: "Lucida Console", "Lucida Sans Typewriter", Monaco, "Bitstream Vera Sans Mono", monospace;
+	text-align:center; 
+	font-size:22px; 
+}
+
+h4
+{ 
+	color:black;
+	font-size:18px; 
+}
+p
+{
+	font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+	text-align:center;
+	font-size:14px; 
+} 
+
+#headerTech {
+    font-size: 18px;  
+}
+
+#technology {
+    font-size: 16px;
+	font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+}
+header  
+{
+	/* text-align:center; */
+} 
+body 
+{
+	text-align:center; 
+	width: 75%; /* Determine amount on page that the width can fill */ 
+	max-width: 100em; /* Determine the maximum width that elements can fill in page */
+	margin: auto;
+	height:100%;
+}
+
+footer 
+{
+	text-align:center;	
+	margin: 5em 0;
+}
+
+audio 
+{
+	text-align:left;	
+position:absolute;
+left:5px;
+}
+.contents
+{
+	text-align:center; 
+color:rgb(255,255,0);
+
+}
+
+p.aboutMe
+{
+color:rgb(0,0,0);
+}
+p.myQuote
+{
+color:rgb(0,0,0);
+}

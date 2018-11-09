@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en"> <!-- Language is English --> 
+<!-- Note: Style may remain even after commenting out, remove entirely from html--> 
+   <link rel = "stylesheet" type = "text/css" href="software.css" /> <!-- Import styles from different file --> 
+   <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+   <script src="software.js"></script>
+	<body ng-controller="ProjCtrl">
+	<meta name="keywords" content="Soon Chee Loong, University of Toronto, cheeloongsoon@mail.utoronto.ca, Electrical Engineer"/>
+	<meta name="description" content="Soon Chee Loong's Work"/>
+		<div class="buttonWrapper">
+			    <button class="btn btn-danger" type="button" ng-click="close()">Close</button>
+		</div>
+		<!-- Article-->
+		<div id="musicPlayer">
+		<h2>Music Player</h2>
+		<h3>Purpose</h3> 
+		<p> 
+		The purpose of this project was to implement Digital Signal Processing algorithms in NIOS II Assembly on the Altera DE2 Board. 		
+		</p> 
+		<h3>Goal</h3> 
+		<p>
+		Our goal was to learn to work with the sound signals. 
+		We felt that Soon Chee Loong's programming abilities and Aditya's expertise in signal processing will be a great combination for this project. 
+		Thus, we decided to code a signal processing algorithm that enables users to play multiple notes at the same time. We also aim to 
+		read sound files from SD Card so that users can change the way their instrument sounds by simply changing the data on the SD Card. 
+		</p> 
+		<h3>Design Challenges</h3>
+		<h4>Realtime Sound Processing</h4> 
+		<p>
+		As the DE2 board works by constantly outputting data from the buffer, we have to ensure that the rate that we write into the buffer
+		is quicker than the rate the data is outputted from the buffer into the speakers. Due to this, we have a limitation 
+		on the amount of notes that could be played simultaneously. For the Flute, which did not incorporate the Beat Frequency algorithm, 
+		we could play up to 5 notes simultaneously. However, for the Trumpet which includes the Beat Frequency algorithm, 
+		we could only play 3 notes simultaneously. To ensure our code executed quickly, we limited the number of reads from memory,
+		recycle usage of each available register, and used shift operations instead of divisions and multiplications. 
+		</p>
+		
+		<h4>Reading the sound file</h4> 
+		<p>
+		Initially, we wanted to read the sound file from the SD Card. However, due to time limitation, we had to read the sound files from the code itself. 
+		Therefore, we tested out sounds that we liked from the Java Sound Library, read the sound file in Matlab to obtain its numerical representation, 
+		manually capture a period of the sound wave in Matlab while noting the number of samples for each sound file, and finally 
+		copy pasting these numeric values into the code itself inside Assembly. By doing this, we do not waste time reading sound files from memory
+		and all sound memory is stored on the DE2 board during compilation. This itself was a challenge as not all sound files from Java were perfectly periodic. 
+		Note: Each note for each instrument corresponds to a single sound file. 
+		</p> 
+
+		<h4>Keeping track of the sound file</h4> 
+		<p>
+		As each sound file (note) has different number of frequencies, we have to keep track of which sample within each note
+		are we currently reading when the notes are played as a chord. Thus, we kept global buffers that keeps track of the value of the 
+		current sample being read from each sound file. Therefore, we read data from the sound file as if there was a pointer
+		looping through each sound file and looping back after it reach the end of the sound file. 
+		</p> 
+				
+		<h4>Beat Frequency Algorithm</h4> 
+		<p> 
+		We decided to implement the Beat Frequency algorithm onto the Trumpet sound after accidentally discovering this algorithm when 
+		choosing which sound we wanted to implement. Basically, the G note on the Trumpet has 244 samples whereas the G note on the Flute has 
+		243 samples. When we played both notes separately on the Music Player, we heard the Beat Frequency effect being played. 
+		After analyzing that the reason this is happening is because one note has a shorter period than the other, and that 
+		a 3rd note is being played with a period of 244 samples (the difference between both notes), we implemented
+		the algorithm to simultaneously read from both sound signal simultaneously each time, one looping back 1 sample earlier 
+		than the actual sound file, thus generating the Beat Frequency effect. 
+		</p> 
+		
+		<h3>Result</h3> 
+		<p>
+		The music player was able to play two different instrument sounds. 
+		For the flute, it was able to play up to 5 different notes simultaneously. 
+		For the trumpet, it was only able to play up to 3 different notes simultaneously as computation time was used to execute the 
+		Beat Frequency algorithm. Due to Realtime Sound Processing limitations as described above, we decided not to read from the 
+		SD Card as reading from the SD Card will greatly increase computation time and only allowed us to play two notes simultaneously. 
+		An explanation of the project is shown in <em>Video 1</em> whereas a demonstration of the project in action is shown in <em>Video 2</em>. 
+		</p>
+		<video poster="img/MusicPlayerCover.png" controls width="720" height="405"> <!-- Poster is the picture on screen before clicking play --> 
+		<source src="video/musicPlayerVideo1.mp4" type="video/mp4" />
+		<p>Your browser doesn't support video, please <a href="video/musicPlayer.mp4">download it</a>.</p>
+		</video>
+		<p> <ins>Video 1: A Demonstration of the Music Player.</ins> </p> 
+		<video controls width="720" height="405"> <!-- Poster is the picture on screen before clicking play --> 
+		<source src="video/musicPlayerVideo2.mp4" type="video/mp4" />
+		<p>Your browser doesn't support video, please <a href="video/musicPlayer.mp4">download it</a>.</p>
+		</video>
+		<p> <ins>Video 2: Music Player Jam Session.</ins> </p> 		
+
+		<h3>Reflection</h3> 
+		<h4>Divide & Conquer</h4> 
+		<p>
+		Our project worked within a few days although it was only a 3 week project. Aditya was an expert in using Matlab whereas I was proficient in Assembly. 
+		</p>
+		
+		<h4>Pair Programming</h4> 
+		<p>
+		We progressed a lot quicker when I coded and Aditya was there to check my code. There was a day when I actually coded everything before 
+		our meet and we had to spend more time fixing minor bugs that I accidentally introduced when I coded alone. 
+		</p>
+		
+		<h3>Report</h3>
+		<p>
+		<a class=Report href="https://github.com/scheeloong/NiosII-Assembly/tree/master/Music%20Player"><span>Code</span></a>  
+		</p>
+		
+		<h3>Task Distribution</h3>
+		
+		<h4>Aditya</h4> 
+		<p>
+		Gathering sound file data from Java, into Matlab. Finding the sound signals period manually using Matlab and 
+		saving the numerical data for the sound as well as the number of samples into a text file.
+		Initially got the DE2 board to output pure sinusoidal sound successfully using the Audio Buffer.
+		Design the pointer methodology to keep track of where within the sound file the current algorithm should be reading data from.
+		Implemented push button interrupts. 
+		</p>
+		
+		<h4>Soon Chee Loong</h4>
+		<p>
+		Implement reading sound data from the text file, and outputting it into the Audio Buffer. 
+		Implement all key and LED logic for switching between instruments and turning off both instruments. 
+		Implemented the C to Assembly code to output message onto the terminal as shown in <em>Video 1</em>. 
+		Discovered and implement the Beat Frequency algorithm into the Trumpet Sound. 
+		</p> 
+
+		<h3>Acknowledgement</h3>
+		<p>
+		<a class=Report href="http://www.eecg.toronto.edu/~gulak/"><span>Prof. Glenn Gulak</span></a> for inspiring us to do this project as well as 
+		provide tips on how to make our code run more efficiently. <br> 
+		<a class=Report href="http://people.ece.cornell.edu/land/"><span>Prof. Bruce Land</span></a> for giving us a sense of how large our code
+		if we were to implement the SD Card algorithms ourselves using Assembly by answering our questions on his 
+		<a class=Report href="https://www.facebook.com/groups/124023997580/"><span>Facebook</span></a> Page.<br>
+		</p>
+		</div> 
+	</body>
+</html>
